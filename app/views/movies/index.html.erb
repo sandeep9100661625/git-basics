@@ -1,0 +1,26 @@
+<h2>All Movies</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Movie_name</th>
+      <th>Director</th>
+      <th>hero</th>
+      <th colspan = "4">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@movies.each do |i|%>
+    <tr>
+      <td><%=i.movie_name%></td>
+      <td><%=i.director%></td>
+      <td><%=i.hero%></td>
+      <td><%= link_to 'Show', movie_path(i.id)%></td>
+      <td><%= link_to 'Edit', edit_movie_path(i.id)%></td>
+      <td><%= link_to 'Delete', movie_path(i.id),method: :DELETE, data: {confirm: "Are you sure?"}%></td>
+
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<p><%= link_to 'Create new movie_detail', new_movie_path%></p>

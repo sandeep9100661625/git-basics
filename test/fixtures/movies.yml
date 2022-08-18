@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_name: MyString
+  hero: MyString
+  director: MyString
+
+two:
+  movie_name: MyString
+  hero: MyString
+  director: MyString

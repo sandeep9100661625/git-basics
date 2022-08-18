@@ -1,0 +1,22 @@
+<h1 class = "text-center mt-3">Articles</h1>
+<div class = "container">
+    <div class = "row justify-content-md-center">
+        <div class = "col-8">
+            <div class="card text-center shadow mb-5 bg-white rounded">
+            <div class="card-header">
+                    <i>by sandeep Reddy</i>
+            </div>
+            <div class="card-body">
+                <p><strong>Tittle : </strong><%= @article.tittle%></p>
+                <div class = "text-left"><strong>Description :</strong><%=simple_format(@article.description)%></div>
+                <%= link_to "edit", edit_article_path(@article), class: "btn btn-secondary"%> 
+                <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger"%>
+                <%= link_to "Article_listings", articles_path, class: "btn btn-info"%>
+            </div>
+            <div class="card-footer text-muted">
+                <small>Created at: <%=time_ago_in_words(@article.created_at)%>ago, Updated at:<%=time_ago_in_words(@article.updated_at)%>ago</small>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
