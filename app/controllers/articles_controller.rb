@@ -17,14 +17,15 @@ class ArticlesController < ApplicationController
     
       def create
         @article = Article.new(params.require(:article).permit(:tittle,:description))
+        @article.user = User.first
         if @article.save
           flash[:notice] = "Article saved succesfully!"
+          #render plain: @article.inspect
+          redirect_to @article
+          
         else
-          render = 'new'
+          render 'new'
         end
-    
-        #render plain: @article.inspect
-        redirect_to @article
       end
       def update
         @article = Article.find(params[:id])
@@ -40,9 +41,7 @@ class ArticlesController < ApplicationController
     
       def destroy
         @article = Article.find(params[:id])
-        if @article.destroy
-          render 'destroy'
-        end
+        
       end
     
 end

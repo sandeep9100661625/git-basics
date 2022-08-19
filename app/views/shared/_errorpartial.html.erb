@@ -3,11 +3,8 @@
     <h4 class="alert-heading">Errors!</h4>
     <ul>
       <% @article.errors.full_messages.each do |i| %>
-      <li><%= i %></li>
+        <li><%= i %></li>
       <%end%>
     </ul>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
   </div>
 <%end%>
