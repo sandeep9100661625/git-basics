@@ -1,7 +1,5 @@
-
-
 <div class = "container article-color">
-        <%= render 'shared/errorpartial'%>
+        <%= render 'shared/errorpartial', obj: @article%>
         <%= form_with(model: @article, local: true) do |f| %>
             <div class="form-group row mt-2">
                 <%=f.label :tittle, class:"col-2 col-form-label text-light" %>
