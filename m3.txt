@@ -1,2 +1,6 @@
 add m3 text
+<<<<<<< HEAD
 add 3rd line
+=======
+added 3rd line
+>>>>>>> feature
