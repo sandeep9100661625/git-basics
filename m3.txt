@@ -1,2 +1,3 @@
 add m3 text
 added 3rd line
+added 3rd file
