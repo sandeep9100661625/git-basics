@@ -1,6 +1,6 @@
 <div class = "container article-color">
         <%= render 'shared/errorpartial', obj: @user%>
-        <%= form_with(model: @article, local: true) do |f| %>
+        <%= form_with(model: @user, local: true) do |f| %>
             <div class="form-group row mt-2">
                 <%=f.label :Username, class:"col-2 col-form-label text-light" %>
                 <div class = "col-10">
@@ -10,17 +10,17 @@
             <div class = "form-group row mt-2">
                 <%= f.label :Email,class: "col-2 col-form-label text-light" %>
                 <div class = "col-10">
-                    <%= f.text_field :email,rows: 10,class: "form-control shadow-lg p-1 mb-3 bg-white rounded", placeholder: "desription"%>
+                    <%= f.text_field :email,rows: 10,class: "form-control shadow-lg p-1 mb-3 bg-white rounded", placeholder: "Enter email"%>
                 </div>
             </div>
             <div class = "form-group row mt-2">
                 <%= f.label :Password,class: "col-2 col-form-label text-light" %>
                 <div class = "col-10">
-                    <%= f.password_field :password,rows: 10,class: "form-control shadow-lg p-1 mb-3 bg-white rounded", placeholder: "desription"%>
+                    <%= f.password_field :password,rows: 10,class: "form-control shadow-lg p-1 mb-3 bg-white rounded", placeholder: "Enter password"%>
                 </div>
             </div>
             <div class = "text-center mt-4 update">
-                <%= f.submit class: "btn btn-success"%>
+                <%= f.submit "sign up",class: "btn btn-success"%>
             </div>
         <%end%>
     

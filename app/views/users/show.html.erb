@@ -1,0 +1,14 @@
+<h1>Showing User Articles</h1>
+<p><strong><%= @user.username%> Articles</strong></p>
+
+
+<%if logged_in? && @user == current_user%>
+        <%= link_to 'Edit Profile',edit_user_path(@user.id), class: "btn btn-secondary"%>
+    <%end%>
+<% @articles.each do |i|%>
+    <p><strong>Tittle: </strong><%= i.tittle%></p>
+    <p><strong>Description: </strong><%= i.description%></p>
+    
+<%end%>
+
+<%= will_paginate @articles %>
